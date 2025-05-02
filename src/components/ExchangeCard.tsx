@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { FaExchangeAlt, FaDollarSign, FaArrowDown, FaUniversity, FaSync } from 'react-icons/fa';
+import { FaExchangeAlt, FaDollarSign, FaUniversity, FaSync } from 'react-icons/fa';
 
 interface ExchangeRate {
   moneda: string;
@@ -49,7 +49,7 @@ const ExchangeCard = () => {
       // Limpiar cualquier error previo
       if (error) setError(null);
       
-    } catch (err) {
+    } catch (_) {
       setError('Error al obtener las tasas de cambio. Por favor, intente más tarde.');
       if (showLoading) setLoading(false);
       else setIsRefreshing(false);
