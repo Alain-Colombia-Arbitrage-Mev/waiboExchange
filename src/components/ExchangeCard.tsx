@@ -49,7 +49,7 @@ const ExchangeCard = () => {
       // Limpiar cualquier error previo
       if (error) setError(null);
       
-    } catch (_) {
+    } catch (_error) {
       setError('Error al obtener las tasas de cambio. Por favor, intente más tarde.');
       if (showLoading) setLoading(false);
       else setIsRefreshing(false);
